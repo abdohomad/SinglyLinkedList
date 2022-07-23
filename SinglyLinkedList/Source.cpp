@@ -23,6 +23,7 @@ int main() {
 	node.searchAnElement(head, 6);
 	node.searchAnElement(head, 11);
 	node.printlist(head);
+	node.printListRecursively(head);
 
 	return 0;
 }

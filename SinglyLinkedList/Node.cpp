@@ -14,14 +14,14 @@ void Node::insertAtTheEnd(Node** head, int data)
 {
 	Node* newNode = new Node;
 	newNode->data = data;
-	newNode->next = NULL;
+	newNode->next = nullptr;
 
-	if (*head == NULL) {
+	if (*head == nullptr) {
 		*head = newNode;
 		return;
 	}
 	Node* last = *head;
-	while (last->next != NULL)
+	while (last->next != nullptr)
 	{
 		last = last->next;
 	}
@@ -32,7 +32,7 @@ void Node::insertAtTheEnd(Node** head, int data)
 bool Node::searchAnElement(Node* head, int key)
 {
 	Node* current = head;
-	while (current != NULL)
+	while (current != nullptr)
 	{
 		if (current->data == key) {	
 			std::cout << "the element: " << "" << key << " " << " is exist " << std::endl;
@@ -48,9 +48,19 @@ bool Node::searchAnElement(Node* head, int key)
 
 void Node::printlist(Node* n)
 {
-	while (n != NULL)
+	while (n != nullptr)
 	{
 		std::cout << n->data << "    ";
 		n = n->next;
 	}
+
+	std::cout << std::endl;
+}
+
+void Node::printListRecursively(Node* head)
+{
+	if (head == nullptr)
+		return;
+	printListRecursively(head->next);
+	std::cout << head->data << "    ";
 }

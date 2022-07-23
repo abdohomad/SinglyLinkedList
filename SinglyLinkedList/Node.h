@@ -8,5 +8,6 @@ public:
 	void insertAtTheEnd(Node** head, int data);
 	bool searchAnElement(Node* head, int data);
 	void printlist(Node* n);
+	void printListRecursively(Node* head);
 };
 
